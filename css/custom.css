@@ -1,0 +1,112 @@
+html{
+    height: 100%;
+}
+
+ul#flex-container{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: flex-end; */
+
+    height: 300px;
+    align-items: stretch;
+}
+
+ul li{
+   /** as we have flex wrap set so mandatorily all the elements will occupy
+   100px to fullfill this requirement the elements will start coming on new line if the browser
+   window is shrunk
+   */ 
+   width: 100px;
+   /* flex-grow: 1; */
+   /** allows you to propertiantely specify the ratio among the chikd*/
+   /* height: 150px; */
+   padding-top: 43px;
+   color:#fff;
+   font-weight: bold;
+   font-size: 2.2em;
+   text-align: center; 
+}
+
+ul li:first-child{
+    background: #c2d775;
+}
+ul li:nth-child(2){
+
+    background: #007278;
+}
+ul li:nth-child(3){
+
+    align-self: flex-end;
+    background: #c7b600;
+}
+ul li:nth-child(4){
+
+    background: #a90077;
+}
+ul li:nth-child(5){
+    /* flex-grow: 5;    */
+    background: #00a378;
+}
+ul li:last-child{
+ 
+    background: #00ea72;
+}
+
+/*
+flex-grow: decribes the propertion of parent portion occupied by child
+eg :flex-grow:2 :: occupies 2 propertion in container  
+order
+order property is allowed in which order the elements will be displayed 
+if left as is will consider elements natural ordering
+ul li:first-child{
+    background: #c2d775;
+    order: 2;
+}
+ul li:nth-child(2){
+    order: 1;
+    background: #007278;
+}
+ul li:nth-child(3){
+    order: 5;
+    flex-grow: 2;
+    background: #c7b600;
+}
+ul li:nth-child(4){
+    order: 6;
+    background: #a90077;
+}
+ul li:nth-child(5){
+    order: 3;
+    flex-grow: 5;   
+    background: #00a378;
+}
+ul li:last-child{
+    order:4;
+    background: #00ea72;
+}
+
+flex direction tells you how the items are layed out
+it can be in four different directions
+row
+row-reverse
+column
+column-reverse
+
+flex-wrap: it tells us if it stays on same line or wrap to create create multiple row
+based on the view port
+
+justification of contents can be controlled .
+justificatin is kind of alignment
+flex-end -> indicates left
+flex-start -> indicates right
+
+align-items : controls alignment
+flex-start-> indicates top
+flex-end -> indicates bottom
+
+align self lets us change a particular item in container
+*/
